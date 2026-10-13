@@ -117,6 +117,11 @@
     border-bottom: 2px solid transparent;
   }
   .site-nav a:hover { border-bottom-color: var(--white); }
+  @media (max-width: 560px) {
+    .site-header .wrap { flex-wrap: wrap; padding-top: .5rem; padding-bottom: .5rem; }
+    .site-nav { width: 100%; justify-content: space-between; gap: .5rem; }
+    .site-nav a { font-size: .82rem; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -340,6 +345,31 @@
   .publisher { max-width: 40rem; }
   .publisher p { margin: 0 0 1.25rem; }
 
+  /* ---------- Events ---------- */
+  .event-list { display: grid; gap: 1.5rem; max-width: 48rem; }
+  .event {
+    padding: 1.5rem;
+    border-left: 4px solid var(--sage);
+    background: var(--white);
+  }
+  .event time {
+    display: block;
+    margin-bottom: .5rem;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--moss);
+  }
+  .event h3 {
+    margin: 0 0 .5rem;
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+  .event p { margin: 0 0 .75rem; }
+  .event a { font-family: var(--sans); font-weight: 700; }
+
   /* ---------- Get the book ---------- */
   .get {
     background: var(--sage);
@@ -378,6 +408,7 @@
     <nav class="site-nav" aria-label="Main">
       <a href="#about">The book</a>
       <a href="#authors">Authors</a>
+      <a href="#events">Events</a>
       <a href="#get">Get the book</a>
     </nav>
   </div>
@@ -554,6 +585,27 @@
       <p class="together">
         Between them, the three authors have worked at Microsoft, Cisco, Workday, Meta, Amazon, Block, and Salesforce, and all three teach the next generation of localization professionals. This book is what happens when you put twenty-plus years of that experience in one place.
       </p>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS ================= -->
+  <section class="section section-light" id="events">
+    <div class="wrap">
+      <h2 class="section-title">Events</h2>
+      <div class="event-list">
+        <article class="event">
+          <time datetime="2026-10-13">October 13 · 7:00 p.m. PST</time>
+          <h3>Book launch podcast with Tucker Johnson</h3>
+          <p>Join us for a conversation with Tucker Johnson at Nimdzi Live on LinkedIn.</p>
+          <a href="https://lnkd.in/p/gfqKc5fR" target="_blank" rel="noopener noreferrer">Watch on LinkedIn</a>
+        </article>
+        <article class="event">
+          <time datetime="2026-10-20">October 20 · 10:00 a.m. PST</time>
+          <h3>Book signing at LocWorld 56</h3>
+          <p>Vancouver, British Columbia, Canada.</p>
+          <a href="https://locworld.com/locworld-library-powered-by-languageline/" target="_blank" rel="noopener noreferrer">Event details</a>
+        </article>
+      </div>
     </div>
   </section>
 
