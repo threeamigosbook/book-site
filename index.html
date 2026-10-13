@@ -377,8 +377,69 @@
     text-align: left;
   }
   .get .section-title { max-width: 20ch; }
-  .get p { max-width: 36rem; margin: 0 0 1.25rem; font-size: 1.2rem; }
+  .get p { max-width: 42rem; margin: 0 0 1.25rem; font-size: 1.15rem; }
   .get .cta-row { margin-bottom: 2.25rem; }
+
+  .retail-subheading {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 1.35rem;
+    margin: 1.75rem 0 .75rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--lichen);
+  }
+
+  .retail-info-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    margin: 2.5rem 0;
+  }
+  @media (min-width: 820px) {
+    .retail-info-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .retail-card {
+    background: rgba(0, 0, 0, 0.14);
+    border-left: 3px solid var(--lichen);
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+  .retail-card h3 {
+    margin: 0 0 .75rem;
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .retail-card p {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    margin: 0 0 .75rem;
+  }
+  .retail-list {
+    margin: .5rem 0 0;
+    padding-left: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .retail-list li { margin-bottom: .35rem; }
+  .retail-list a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .retail-list a:hover {
+    color: var(--lichen);
+  }
+
+  .get-contact {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
 
   /* ---------- Footer ---------- */
   .site-footer {
@@ -625,20 +686,48 @@
   <section class="section get" id="get">
     <div class="wrap">
       <h2 class="section-title">Get the book</h2>
+
+      <h3 class="retail-subheading">Available now</h3>
       <p>
-        Buy the book on Amazon using the link below. More purchase options will be added here as they become available.
+        Order your copy directly from the following retailers:
       </p>
       <div class="cta-row">
-        <a class="btn btn-solid" href="https://a.co/d/0iVYPJQh" target="_blank" rel="noopener noreferrer" aria-label="Buy on Amazon (opens in a new tab)">Buy on Amazon</a>
+        <a class="btn btn-solid" href="https://a.co/d/0iVYPJQh" target="_blank" rel="noopener noreferrer" aria-label="Buy on Amazon (opens in a new tab)">Amazon</a>
+        <a class="btn btn-solid" href="https://www.barnesandnoble.com/w/three-amigos-and-a-global-revolution-agusti-n-da-fieno-delucchi/1151615581" target="_blank" rel="noopener noreferrer" aria-label="Buy on Barnes &amp; Noble (opens in a new tab)">Barnes &amp; Noble</a>
+        <a class="btn btn-ghost" href="https://bookshop.org/" target="_blank" rel="noopener noreferrer" aria-label="Search on Bookshop.org (opens in a new tab)">Bookshop.org</a>
       </div>
 
-      <p>
-        If you would like to get in touch about the book, a speaking engagement, or a conversation about the future of localization, drop the authors a line.
-      </p>
+      <div class="retail-info-grid">
+        <div class="retail-card">
+          <h3>More retailers worldwide</h3>
+          <ul class="retail-list">
+            <li><strong>United States:</strong> Walmart, Target, Books-A-Million</li>
+            <li><strong>Canada:</strong> Indigo</li>
+            <li><strong>Europe:</strong> Waterstones, Blackwell’s, Hugendubel, Thalia</li>
+            <li><strong>Australia &amp; New Zealand:</strong> Booktopia</li>
+          </ul>
+        </div>
 
-      <div class="cta-row">
-        <!-- TODO: replace with the real contact address. -->
-        <a class="btn btn-ghost" href="mailto:thethreeamigosbook@gmail.com">Contact the authors</a>
+        <div class="retail-card">
+          <h3>Ask your local bookstore or library</h3>
+          <p>
+            More than <strong>40,000 brick-and-mortar bookstores and libraries</strong> with an Ingram wholesale account have access to the book's metadata.
+          </p>
+          <p>
+            If you prefer to borrow or support your neighborhood bookseller, ask them to search for <em>Three Amigos and a Global Revolution</em> to order copies directly for you.
+          </p>
+        </div>
+      </div>
+
+      <div class="get-contact">
+        <h3 class="retail-subheading">Get in touch</h3>
+        <p>
+          If you would like to get in touch about the book, a speaking engagement, or a conversation about the future of localization, drop the authors a line.
+        </p>
+        <div class="cta-row">
+          <!-- TODO: replace with the real contact address. -->
+          <a class="btn btn-ghost" href="mailto:thethreeamigosbook@gmail.com">Contact the authors</a>
+        </div>
       </div>
     </div>
   </section>
